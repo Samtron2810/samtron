@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Samuel Daniel - Samtron; Full Stack Developer. Crafting high-performance software with neon-sharp precision."
+    />
+    <title>SAMTRON.DEV // Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Animated background layers -->
+    <div class="bg-grid"></div>
+    <div class="bg-scanlines"></div>
+    <canvas id="particles-canvas"></canvas>
+    <div class="bg-vignette"></div>
+
+    <!-- Custom cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket"></span
+          ><span class="logo-name">SAMTRON.DEV</span
+          ><span class="logo-bracket"></span>
+        </a>
+        <ul class="nav-links">
+          <li>
+            <a href="#hero" data-section="hero" class="nav-link active"
+              >~/about</a
+            >
+          </li>
+          <li>
+            <a href="#stack" data-section="stack" class="nav-link">~/stack</a>
+          </li>
+          <li>
+            <a href="#projects" data-section="projects" class="nav-link"
+              >~/projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" data-section="contact" class="nav-link"
+              >~/contact</a
+            >
+          </li>
+        </ul>
+        <div class="nav-status">
+          <span class="status-dot"></span>
+          <span class="status-text">ONLINE</span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="section section-hero">
+        <div class="container hero-grid">
+          <div class="hero-content reveal" data-reveal>
+            <div class="hero-tag">
+              <span class="tag-prompt">&gt;</span> system.init()
+            </div>
+            <h1 class="hero-title">SAMUEL DANIEL</h1>
+            <p class="hero-alias">
+              // aka <span class="alias-name">Samtron</span>
+            </p>
+            <h2 class="hero-subtitle">
+              <span class="subtitle-prefix">// </span>FULL STACK
+              <span class="accent-magenta">/</span>
+              <span class="subtitle-divider">/</span>
+              DEVELOPER
+            </h2>
+            <p class="hero-tagline">
+              <span class="cursor-blink">█</span>
+              <span id="typed-text"></span>
+            </p>
+            <p class="hero-description">
+              Crafting high-performance, scalable systems with neon-sharp
+              precision. Specialized in turning complex problems into elegant,
+              user-centric interfaces.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>EXPLORE_WORK</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a
+                href="cv.pdf"
+                download="Samuel_Daniel_CV.pdf"
+                class="btn btn-cv"
+              >
+                <span class="btn-icon" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="square"
+                    stroke-linejoin="miter"
+                  >
+                    <path d="M12 3v12" />
+                    <path d="M7 10l5 5 5-5" />
+                    <path d="M4 19h16" />
+                  </svg>
+                </span>
+                <span>DOWNLOAD_CV</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <span>INITIATE_CONTACT</span>
+              </a>
+            </div>
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-label">LOCATION</span>
+                <span class="meta-value">REMOTE / GLOBAL</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">STATUS</span>
+                <span class="meta-value accent-cyan">AVAILABLE FOR HIRE</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">UPTIME</span>
+                <span class="meta-value" id="uptime">00:00:00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" data-reveal>
+            <div class="terminal-frame">
+              <div class="terminal-header">
+                <span class="term-dot term-dot-red"></span>
+                <span class="term-dot term-dot-yellow"></span>
+                <span class="term-dot term-dot-green"></span>
+                <span class="term-title">samtron@dev ~ %</span>
+              </div>
+              <div class="terminal-body">
+                <pre class="ascii-art">
+ ███████╗██████╗
+ ██╔════╝██╔══██╗
+ ███████╗██║  ██║
+ ╚════██║██║  ██║
+ ███████║██████╔╝
+ ╚══════╝╚═════╝ </pre
+                >
+                <div class="term-line">
+                  <span class="term-prompt">$</span> whoami
+                </div>
+                <div class="term-output">samuel_daniel</div>
+                <div class="term-line">
+                  <span class="term-prompt">$</span> role.txt
+                </div>
+                <div class="term-output">full_stack_developer</div>
+                <div class="term-line">
+                  <span class="term-prompt">$</span> ls skills/
+                </div>
+                <div class="term-output term-output-grid">
+                  <span>node</span><span>react</span><span>next</span><br />
+                  <span>ts</span><span>express</span><span>tailwind</span><br />
+                  <span>mongo</span><span>postgres</span><span>git</span>
+                </div>
+                <div class="term-line">
+                  <span class="term-prompt">$</span>
+                  <span class="cursor-blink">█</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#projects"
+          class="scroll-indicator"
+          aria-label="Scroll to projects"
+        >
+          <span class="scroll-text">SCROLL</span>
+          <span class="scroll-line"></span>
+        </a>
+      </section>
+
+      <!-- STACK -->
+      <section id="stack" class="section section-stack">
+        <div class="container">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-num">02</span>
+            <h2 class="section-title">
+              <span class="title-bracket"></span>DETAILED_TECH_STACK<span
+                class="title-bracket"
+              ></span>
+            </h2>
+            <p class="section-subtitle">
+              // Crafting scalable products from concept to deployment
+            </p>
+          </div>
+
+          <div class="stack-categories reveal" data-reveal>
+            <!-- LANGUAGES -->
+            <div class="stack-category">
+              <h3 class="category-title">
+                <span class="cat-prefix">//</span> LANGUAGES
+              </h3>
+              <div class="tech-cards tech-cards-2col">
+                <article class="tech-card" data-color="#339933" data-init="Nj">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Nj</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Node.js</h4>
+                      <p class="tech-desc">Core Runtime</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="92"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#3178c6" data-init="Ts">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Ts</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">TypeScript</h4>
+                      <p class="tech-desc">Typed Core</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="90"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#e34f26" data-init="H5">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>H5</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">HTML5</h4>
+                      <p class="tech-desc">Structure</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="95"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#1572b6" data-init="C3">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>C3</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">CSS3</h4>
+                      <p class="tech-desc">Styling</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="93"></div>
+                  </div>
+                </article>
+
+                <article
+                  class="tech-card tech-card-span2"
+                  data-color="#f7df1e"
+                  data-init="Js"
+                >
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Js</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">JavaScript</h4>
+                      <p class="tech-desc">Scripting</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="96"></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- FRONTEND FRAMEWORKS -->
+            <div class="stack-category">
+              <h3 class="category-title">
+                <span class="cat-prefix">//</span> FRONTEND FRAMEWORKS
+              </h3>
+              <div class="tech-cards">
+                <article class="tech-card" data-color="#06b6d4" data-init="TW">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Tw</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Tailwind CSS</h4>
+                      <p class="tech-desc">Utility Styling</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="93"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#61dafb" data-init="Re">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Re</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">React.js</h4>
+                      <p class="tech-desc">User Interfaces</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="94"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#ffffff" data-init="Nx">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Nx</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Next.js</h4>
+                      <p class="tech-desc">SSG &amp; SSR</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="86"></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- BACKEND STACK -->
+            <div class="stack-category">
+              <h3 class="category-title">
+                <span class="cat-prefix">//</span> BACKEND STACK
+              </h3>
+              <div class="tech-cards">
+                <article class="tech-card" data-color="#e6e6e6" data-init="Ex">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Ex</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Express.js</h4>
+                      <p class="tech-desc">Framework</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="89"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#e0234e" data-init="Ns">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Ns</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">NestJS</h4>
+                      <p class="tech-desc">
+                        Scaling <span class="learning-tag">(Learning)</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="72"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#00f0ff" data-init="API">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>API</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">REST APIs</h4>
+                      <p class="tech-desc">Integration</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="91"></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- INFRASTRUCTURE & TOOLS -->
+            <div class="stack-category stack-category-wide">
+              <h3 class="category-title">
+                <span class="cat-prefix">//</span> INFRASTRUCTURE &amp; TOOLS
+              </h3>
+              <div class="tech-cards tech-cards-grid-6">
+                <article class="tech-card" data-color="#47a248" data-init="Mo">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Mo</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">MongoDB</h4>
+                      <p class="tech-desc">NoSQL DB</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="87"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#336791" data-init="Pg">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Pg</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">PostgreSQL</h4>
+                      <p class="tech-desc">Relational DB</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="84"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#800000" data-init="Ms">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Ms</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Mongoose</h4>
+                      <p class="tech-desc">ODM</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="88"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#dc382d" data-init="Rd">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Rd</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Redis</h4>
+                      <p class="tech-desc">Caching</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="80"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#f05032" data-init="Gt">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Gt</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Git</h4>
+                      <p class="tech-desc">Version Control</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="95"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#7c3aed" data-init="Rw">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Rw</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Railway</h4>
+                      <p class="tech-desc">Deployment</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="76"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#1c1aed" data-init="Rn">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Rn</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Render</h4>
+                      <p class="tech-desc">Deployment</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="76"></div>
+                  </div>
+                </article>
+
+                <article class="tech-card" data-color="#0f0f05" data-init="Vc">
+                  <div class="tech-card-top">
+                    <div class="tech-logo"><span>Vc</span></div>
+                    <div class="tech-info">
+                      <h4 class="tech-name">Vercel</h4>
+                      <p class="tech-desc">Deployment</p>
+                    </div>
+                  </div>
+                  <div class="tech-progress">
+                    <div class="tech-progress-bar" data-level="76"></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section section-projects">
+        <div class="container">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-num">03</span>
+            <h2 class="section-title">
+              <span class="title-bracket"></span>FEATURED_PROJECTS<span
+                class="title-bracket"
+              ></span>
+            </h2>
+            <p class="section-subtitle">// recent deployments</p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- PROJECT 01; Comprehensive University Portal -->
+            <article
+              class="project-card reveal"
+              data-reveal
+              data-category="frontend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-corner card-corner-tl"></div>
+              <div class="card-corner card-corner-tr"></div>
+              <div class="card-corner card-corner-bl"></div>
+              <div class="card-corner card-corner-br"></div>
+              <header class="card-header">
+                <div class="card-header-left">
+                  <span class="project-id">PROJECT_01</span>
+                  <span class="project-category cat-frontend">▸ FRONTEND</span>
+                </div>
+                <span class="project-status status-live">● LIVE</span>
+              </header>
+              <div class="card-mockup mockup-dashboard">
+                <div class="dash-row">
+                  <div class="dash-stat s1">
+                    <span class="dash-num">847</span
+                    ><span class="dash-lbl">students</span>
+                  </div>
+                  <div class="dash-stat s2">
+                    <span class="dash-num">42</span
+                    ><span class="dash-lbl">courses</span>
+                  </div>
+                  <div class="dash-stat s3">
+                    <span class="dash-num">96<small>%</small></span
+                    ><span class="dash-lbl">pass</span>
+                  </div>
+                </div>
+                <div class="dash-chart">
+                  <div class="dash-bar b1"></div>
+                  <div class="dash-bar b2"></div>
+                  <div class="dash-bar b3"></div>
+                  <div class="dash-bar b4"></div>
+                  <div class="dash-bar b5"></div>
+                </div>
+              </div>
+              <h3 class="project-name" data-text="UNIPORTAL">UNIPORTAL</h3>
+              <p class="project-desc">
+                Comprehensive university portal featuring role-based dashboards
+                for students, lecturers, and administrators; streamlining campus
+                workflows from enrollment to grading.
+              </p>
+              <ul class="project-tags">
+                <li>React</li>
+                <li>Vite</li>
+                <li>Tailwind CSS</li>
+              </ul>
+              <footer class="card-footer">
+                <a
+                  href="https://github.com/Samtron2810/comprehensive-university-portal"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-github"
+                  >GITHUB_REPO →</a
+                >
+                <a
+                  href="https://comprehensive-university-portal.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-demo"
+                  >LIVE_DEMO →</a
+                >
+              </footer>
+            </article>
+
+            <!-- PROJECT 02; Tronites -->
+            <article
+              class="project-card reveal"
+              data-reveal
+              data-category="fullstack"
+            >
+              <div class="card-glow"></div>
+              <div class="card-corner card-corner-tl"></div>
+              <div class="card-corner card-corner-tr"></div>
+              <div class="card-corner card-corner-bl"></div>
+              <div class="card-corner card-corner-br"></div>
+              <header class="card-header">
+                <div class="card-header-left">
+                  <span class="project-id">PROJECT_02</span>
+                  <span class="project-category cat-fullstack"
+                    >▸ FULL-STACK</span
+                  >
+                </div>
+                <span class="project-status status-live">● LIVE</span>
+              </header>
+              <div class="card-mockup mockup-chat">
+                <div class="chat-msg chat-in">Hey, you up?</div>
+                <div class="chat-msg chat-out">Send the spec →</div>
+                <div class="chat-msg chat-in">On it now ✓</div>
+                <div class="chat-msg chat-out">Got it, thanks!</div>
+              </div>
+              <h3 class="project-name" data-text="TRONITES">TRONITES</h3>
+              <p class="project-desc">
+                A focused social network with real-time chat, personalized
+                feeds, and push-style notifications; bringing the core social
+                experience into a fast, snappy interface.
+              </p>
+              <ul class="project-tags">
+                <li>MongoDB</li>
+                <li>React</li>
+                <li>Vite</li>
+                <li>Redis</li>
+                <li>Express</li>
+                <li>Socket.io</li>
+              </ul>
+              <footer class="card-footer">
+                <a
+                  href="https://github.com/Samtron2810/tronites"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-github"
+                  >GITHUB_REPO →</a
+                >
+                <a
+                  href="https://tronites.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-demo"
+                  >LIVE_DEMO →</a
+                >
+              </footer>
+            </article>
+
+            <!-- PROJECT 03; TronMarket -->
+            <article
+              class="project-card reveal"
+              data-reveal
+              data-category="fullstack"
+            >
+              <div class="card-glow"></div>
+              <div class="card-corner card-corner-tl"></div>
+              <div class="card-corner card-corner-tr"></div>
+              <div class="card-corner card-corner-bl"></div>
+              <div class="card-corner card-corner-br"></div>
+              <header class="card-header">
+                <div class="card-header-left">
+                  <span class="project-id">PROJECT_03</span>
+                  <span class="project-category cat-fullstack"
+                    >▸ FULL-STACK</span
+                  >
+                </div>
+                <span class="project-status status-live">● LIVE</span>
+              </header>
+              <div class="card-mockup mockup-products">
+                <div class="prod">
+                  <div class="prod-img p-img-1"></div>
+                  <div class="prod-info">
+                    <div class="prod-name"></div>
+                    <div class="prod-price">$24</div>
+                  </div>
+                </div>
+                <div class="prod">
+                  <div class="prod-img p-img-2"></div>
+                  <div class="prod-info">
+                    <div class="prod-name"></div>
+                    <div class="prod-price">$58</div>
+                  </div>
+                </div>
+                <div class="prod">
+                  <div class="prod-img p-img-3"></div>
+                  <div class="prod-info">
+                    <div class="prod-name"></div>
+                    <div class="prod-price">$12</div>
+                  </div>
+                </div>
+                <div class="prod">
+                  <div class="prod-img p-img-4"></div>
+                  <div class="prod-info">
+                    <div class="prod-name"></div>
+                    <div class="prod-price">$89</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="project-name" data-text="TRONMARKET">TRONMARKET</h3>
+              <p class="project-desc">
+                Full-stack e-commerce platform with multi-role dashboards for
+                customers, sellers, and admins; covering the full shopping
+                lifecycle from browse to checkout to fulfillment.
+              </p>
+              <ul class="project-tags">
+                <li>MongoDB</li>
+                <li>React</li>
+                <li>Vite</li>
+                <li>Redis</li>
+                <li>Express</li>
+                <li>Node.js</li>
+              </ul>
+              <footer class="card-footer">
+                <a
+                  href="https://github.com/Samtron2810/tronmarket"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-github"
+                  >GITHUB_REPO →</a
+                >
+                <a
+                  href="https://tronmarket.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-demo"
+                  >LIVE_DEMO →</a
+                >
+              </footer>
+            </article>
+
+            <!-- PROJECT 04; Shopple Store -->
+            <article
+              class="project-card reveal"
+              data-reveal
+              data-category="frontend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-corner card-corner-tl"></div>
+              <div class="card-corner card-corner-tr"></div>
+              <div class="card-corner card-corner-bl"></div>
+              <div class="card-corner card-corner-br"></div>
+              <header class="card-header">
+                <div class="card-header-left">
+                  <span class="project-id">PROJECT_04</span>
+                  <span class="project-category cat-frontend">▸ FRONTEND</span>
+                </div>
+                <span class="project-status status-live">● LIVE</span>
+              </header>
+              <div class="card-mockup mockup-shop">
+                <div class="shop-hero"></div>
+                <div class="shop-info">
+                  <div class="shop-title"></div>
+                  <div class="shop-price">$48<small>.00</small></div>
+                  <div class="shop-btn">+ ADD</div>
+                </div>
+              </div>
+              <h3 class="project-name" data-text="SHOPPLE">SHOPPLE</h3>
+              <p class="project-desc">
+                Sleek storefront-style e-commerce site; polished product
+                browsing, cart flow, and a fully responsive shopping experience
+                built for speed.
+              </p>
+              <ul class="project-tags">
+                <li>React</li>
+                <li>Bootstrap</li>
+              </ul>
+              <footer class="card-footer">
+                <a
+                  href="https://github.com/Samtron2810/shopplestore"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-github"
+                  >GITHUB_REPO →</a
+                >
+                <a
+                  href="https://shopplestore.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-demo"
+                  >LIVE_DEMO →</a
+                >
+              </footer>
+            </article>
+
+            <!-- PROJECT 05; MERN Todolist -->
+            <article
+              class="project-card reveal"
+              data-reveal
+              data-category="frontend"
+            >
+              <div class="card-glow"></div>
+              <div class="card-corner card-corner-tl"></div>
+              <div class="card-corner card-corner-tr"></div>
+              <div class="card-corner card-corner-bl"></div>
+              <div class="card-corner card-corner-br"></div>
+              <header class="card-header">
+                <div class="card-header-left">
+                  <span class="project-id">PROJECT_05</span>
+                  <span class="project-category cat-fullstack"
+                    >▸ FULLSTACK</span
+                  >
+                </div>
+                <span class="project-status status-live">● LIVE</span>
+              </header>
+              <div class="card-mockup mockup-checklist">
+                <div class="ck-row done">
+                  <span class="ck-box"></span><span class="ck-line"></span>
+                </div>
+                <div class="ck-row done">
+                  <span class="ck-box"></span
+                  ><span class="ck-line short"></span>
+                </div>
+                <div class="ck-row">
+                  <span class="ck-box"></span><span class="ck-line"></span>
+                </div>
+                <div class="ck-row done">
+                  <span class="ck-box"></span
+                  ><span class="ck-line medium"></span>
+                </div>
+                <div class="ck-row">
+                  <span class="ck-box"></span
+                  ><span class="ck-line short"></span>
+                </div>
+              </div>
+              <h3 class="project-name" data-text="MERN TODO">MERN TODO</h3>
+              <p class="project-desc">
+                Secure MERN-stack todo app with JWT authentication; your private
+                tasks follow you everywhere, accessible from any device with
+                realtime sync.
+              </p>
+              <ul class="project-tags">
+                <li>MongoDB</li>
+                <li>Express</li>
+                <li>React</li>
+                <li>Vite</li>
+                <li>Tailwind</li>
+                <li>Node.js</li>
+              </ul>
+              <footer class="card-footer">
+                <a
+                  href="https://github.com/Samtron2810/todolist-mern-frontend"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-github"
+                  >GITHUB_REPO →</a
+                >
+                <a
+                  href="https://todolist-mern-frontend.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="card-link card-link-demo"
+                  >LIVE_DEMO →</a
+                >
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section-contact">
+        <div class="container contact-container">
+          <div class="section-header reveal" data-reveal>
+            <span class="section-num">04</span>
+            <h2 class="section-title">
+              <span class="title-bracket"></span>LET'S_BUILD_SOMETHING<span
+                class="title-bracket"
+                >()</span
+              ><span class="title-bracket"></span>
+            </h2>
+            <p class="section-subtitle">
+              // open a connection &amp; transmit your idea
+            </p>
+          </div>
+
+          <div class="contact-grid reveal" data-reveal>
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-field">
+                <label for="name" class="form-label">
+                  <span class="label-num">01</span>
+                  <span class="label-text">NAME</span>
+                </label>
+                <div class="input-wrapper">
+                  <span class="input-prompt">&gt;</span>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="enter_your_name"
+                    required
+                  />
+                </div>
+                <span class="field-status" data-status-for="name"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="email" class="form-label">
+                  <span class="label-num">02</span>
+                  <span class="label-text">EMAIL</span>
+                </label>
+                <div class="input-wrapper">
+                  <span class="input-prompt">&gt;</span>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="you@domain.dev"
+                    required
+                  />
+                </div>
+                <span class="field-status" data-status-for="email"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="message" class="form-label">
+                  <span class="label-num">03</span>
+                  <span class="label-text">MESSAGE</span>
+                </label>
+                <div class="input-wrapper input-wrapper-textarea">
+                  <span class="input-prompt">&gt;</span>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    placeholder="describe_your_project()..."
+                    required
+                  ></textarea>
+                </div>
+                <span class="field-status" data-status-for="message"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-prefix">$</span>
+                <span class="btn-text">SEND_MESSAGE</span>
+                <span class="btn-arrow">→</span>
+              </button>
+
+              <div
+                class="form-response"
+                id="form-response"
+                role="status"
+                aria-live="polite"
+              ></div>
+            </form>
+
+            <aside class="contact-aside">
+              <div class="ascii-frame">
+                <pre>
+   ╔══════════════╗
+   ║  CONNECTED   ║
+   ║   ═══════    ║
+   ║  ▓▓▓▓▓▓▓▓▓▓  ║
+   ╚══════════════╝</pre
+                >
+              </div>
+              <div class="aside-block">
+                <h4 class="aside-title">// CHANNELS</h4>
+                <a
+                  href="https://github.com/Samtron2810"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-link"
+                  data-platform="github"
+                >
+                  <span class="social-bracket"></span>
+                  <span class="social-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.47.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56C20.21 21.39 23.5 17.07 23.5 12 23.5 5.65 18.35.5 12 .5Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="social-text">github</span>
+                  <span class="social-handle">/Samtron2810</span>
+                  <span class="social-bracket"></span>
+                </a>
+                <a
+                  href="https://linkedin.com/in/samueldaniel"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-link"
+                  data-platform="linkedin"
+                >
+                  <span class="social-bracket"></span>
+                  <span class="social-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="social-text">linkedin</span>
+                  <span class="social-handle">/in/samueldaniel</span>
+                  <span class="social-bracket"></span>
+                </a>
+                <a
+                  href="mailto:danielsamuel730@gmail.com?subject=Project%20Inquiry&body=Hi%20Samuel%2C%0A%0AI%20found%20your%20portfolio%20and%20I'm%20interested%20in%20working%20with%20you.%0AHere%20are%20a%20few%20details%20about%20what%20I%20have%20in%20mind%3A%0A%0A%E2%80%A2%20Company%3A%0A%E2%80%A2%20Project%3A%0A%E2%80%A2%20Tech%20stack%20(if%20known)%3A%0A%E2%80%A2%20Timeline%3A%0A%E2%80%A2%20Budget%20(optional)%3A%0A%0AIf%20you're%20available%2C%20I'd%20love%20to%20schedule%20a%20quick%20chat.%0A%0ALooking%20forward%20to%20hearing%20from%20you!%0A%0ABest%2C"
+                  class="social-link"
+                  data-platform="email"
+                >
+                  <span class="social-bracket"></span>
+                  <span class="social-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect x="2" y="4" width="20" height="16" rx="1" />
+                      <path d="m2 7 10 6 10-6" />
+                    </svg>
+                  </span>
+                  <span class="social-text">email</span>
+                  <span class="social-handle"
+                    ><span
+                      class="__cf_email__"
+                      data-cfemail="93fbf6fffffcd3e0f2fee7e1fcfdbdf7f6e5"
+                      >email&#160;protected</span
+                    ></span
+                  >
+                  <span class="social-bracket"></span>
+                </a>
+                <a
+                  href="https://wa.me/2348177578235"
+                  target="_blank"
+                  rel="noopener"
+                  class="social-link"
+                  data-platform="whatsapp"
+                >
+                  <span class="social-bracket"></span>
+                  <span class="social-icon" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="social-text">whatsapp</span>
+                  <span class="social-handle">08177578235</span>
+                  <span class="social-bracket"></span>
+                </a>
+              </div>
+            </aside>
+          </div>
+
+          <footer class="page-footer">
+            <div class="footer-line">
+              <span class="footer-bracket"></span>
+              <span class="footer-text">© 2026 SAMTRON.DEV</span>
+              <span class="footer-sep">|</span>
+              <span class="footer-text">BUILT WITH PRECISION</span>
+              <span class="footer-bracket"></span>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

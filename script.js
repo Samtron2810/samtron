@@ -292,13 +292,6 @@
   }
 
   /* ============================================================
-     6. (Glitch on hero removed — periodic glitch effect disabled)
-     ============================================================ */
-  function initGlitch() {
-    // intentionally no-op: hero glitch effect removed
-  }
-
-  /* ============================================================
      7. Tech progress bar animation
      ============================================================ */
   function initSkillBars() {
